@@ -1,0 +1,7 @@
+<% if @member.errors.any? %>
+	the form contains <%= pluralize(@member.errors.count, "error") %>
+
+	<% @member.errors.full_messages.each do |msg| %>
+		*<%= msg %>
+	<% end %>
+<% end %>
